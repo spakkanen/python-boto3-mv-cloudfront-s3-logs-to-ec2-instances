@@ -6,13 +6,16 @@ from datetime import date
 
 def print_help():
   print("Usage: python mv_s3_all_files.py")
+  print("Remark: This script removes also original S3 CloudFront logs.")
   sys.exit(0)
   
 if len(sys.argv) == 1:
   print("Enter S3 bucket name. Usage: python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>")
+  print("Remark: This script removes also original S3 CloudFront logs.")
   sys.exit(0)
 if len(sys.argv) == 2:
   print("Enter S3 work directory. Create S3 files in directory DIR. Usage: python mv_s3_all_files.py <S3_BUCKET_NAME> <DIR>")
+  print("Remark: This script removes also original S3 CloudFront logs.")
   sys.exit(0)
   
 bucketname = sys.argv[1]
