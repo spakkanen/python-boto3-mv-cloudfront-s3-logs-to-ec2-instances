@@ -67,7 +67,7 @@ $ python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>
 
 ## Cron schedule
 
-You should to set up automatically run Python scripts on a schedule.
+You should set up automatically run Python scripts on a schedule.
 
 Schedule syntax is normal Unix cron/crontab syntax for examples:
 
@@ -113,4 +113,4 @@ Please contact: saku@kliffa.fi .
 
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
-| Saku Pakkanen | [@spakkanen] (https://github.com/spakkanen) | [Cybercom Finland Oy / Kliffa.fi] (https://kliffa.fi/en/) | Committer |
+| Saku Pakkanen | [@spakkanen] (https://github.com/spakkanen) | [Kliffa Innovations Oy] (https://kliffa.fi/en/) | Committer |
