@@ -61,13 +61,25 @@ $ python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>
 
 This Python application connects to the AWS S3. Script fetch CloudFront log files.
 
-	python mv_s3_all_files.py <S3_BUCKET_NAME> <DIR>
+	python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>
+
+## Cron schedule
+
+You should to set up automatically run Python scripts on a schedule.
+
+Schedule syntax is normal Unix cron/crontab syntax for examples:
+
+```sh
+2,12,22,32,42,52 * * * * python /root/python-boto3-mv-cloudfront-s3-logs-to-ec2-instances/mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH> > /dev/null
+# Removes all files older than 2 weeks.
+02 04 * * * find /root/python-boto3-mv-cloudfront-s3-logs-to-ec2-instances/cloudfront_prod1/ -mtime +14 -type f -exec rm -f {} \;
+```
 
 ## Read the log files
 
 The log file is a UNIX standard format and that's easy using and read UNIX tools.
 
-Find main page links (/) from current date log files.
+Find main page links (/) amount from current date log files.
 
 	cat logs/$(date +"%Y%m%d").log | grep -P '\t/\t' | wc -l
 	
@@ -79,102 +91,18 @@ Find all 404 error links.
 
 	cat logs/$(date +"%Y%m%d").log | grep -P '\t404\t' | cut -f 5 | sort | uniq -c | sort -nr | head -n10
 
-# CRONTAB AJASTIN!
-LOPPUUN KIRJOITUS TYÖSKENTELYSTÄ JA KLIFFA.fi
-# ESITTELY JOLLAIN:
-Jeff Barr
-
-Jeff Barr is Chief Evangelist for AWS. He started this blog in 2004 and has been writing posts just about non-stop ever since.
-
-KERRO OHJEESSA, ETTÄ TÄTÄ TÄYTYY AJAA 10 Min. välein.
-
-
-
-```
-mkdir -p /opt/www
-cd /opt/www
-git clone https://github.com/spakkanen/kliffa-booking-platform.git
-```
-
-## Running the Tests
-
-You can run test in Perl code complited carry on check  the syntax of the script.
-
-```
-perl -cw /opt/www/kliffa/cgi-bin/login/index.cgi
-```
-
-## Database MySQL or MariaDB
-
-If your haven't installed Database, you have to install.
-
-Create database.
-
-```
-CREATE DATABASE kliffa CHARACTER SET = 'utf8' COLLATE utf8_general_ci;
-```
-
-Add users of database.
-
-```
-
-```
-
-```
-```
-
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Contributions are welcome. Open an issue first before sending in a pull request. All pull requests review before they are merged to master.
 
-## Versioning
+## Contact
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Please contact: saku@kliffa.fi .
 
-## Authors
+## Workgroup
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+### Member
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## Bugs & Issues
-
-Please feel to report any bugs or issues to us, email to: saku.pakkanen@gmail.com.
-
-## License
-
-Copyright (C) 2016 - 2019 Saku Pakkanen.
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+| Member Name |GitHub Alias|Company| Role |
+| --- | --- | --- | --- |
+| Saku Pakkanen |@spakkanen ](https://github.com/spakkanen)|[Cybercom Finland Oy | Kliffa.fi](https://kliffa.fi/en/)| Committer  |
