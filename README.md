@@ -22,9 +22,9 @@ If your haven't installed Python with Boto3, you have to install.
 Server system on Unix platforms:
 
 ```
-sudo -i
-yum -y install python36
-pip install boto3
+$ sudo -i
+$ yum -y install python36
+$ pip install boto3
 ```
 
 Using Boto3
@@ -61,7 +61,9 @@ $ python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>
 
 This Python application connects to the AWS S3. Script fetch CloudFront log files.
 
-	python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>
+```sh
+$ python mv_s3_all_files.py <S3_BUCKET_NAME> <WORK_PATH>
+```
 
 ## Cron schedule
 
@@ -81,15 +83,21 @@ The log file is a UNIX standard format and that's easy using and read UNIX tools
 
 Find main page links (/) amount from current date log files.
 
-	cat logs/$(date +"%Y%m%d").log | grep -P '\t/\t' | wc -l
-	
+```sh
+$ cat logs/$(date +"%Y%m%d").log | grep -P '\t/\t' | wc -l
+```
+
 Find all main page links.
 
-	cat logs/$(date +"%Y%m%d").log | grep -P '\t/\t' | cut -f 5 | sort | uniq -c | sort -nr | head -n10
+```sh
+$ cat logs/$(date +"%Y%m%d").log | grep -P '\t/\t' | cut -f 5 | sort | uniq -c | sort -nr | head -n10
+```
 
 Find all 404 error links.
 
-	cat logs/$(date +"%Y%m%d").log | grep -P '\t404\t' | cut -f 5 | sort | uniq -c | sort -nr | head -n10
+```sh
+$ cat logs/$(date +"%Y%m%d").log | grep -P '\t404\t' | cut -f 5 | sort | uniq -c | sort -nr | head -n10
+```
 
 ## Contributing
 
