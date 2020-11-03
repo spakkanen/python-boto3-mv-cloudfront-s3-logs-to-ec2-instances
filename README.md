@@ -105,4 +105,4 @@ Please contact: saku@kliffa.fi .
 
 | Member Name |GitHub Alias|Company| Role |
 | --- | --- | --- | --- |
-| Saku Pakkanen |@spakkanen ](https://github.com/spakkanen)|[Cybercom Finland Oy | Kliffa.fi](https://kliffa.fi/en/)| Committer  |
+| Saku Pakkanen | [@spakkanen] (https://github.com/spakkanen) | [Cybercom Finland Oy / Kliffa.fi] (https://kliffa.fi/en/) | Committer |
