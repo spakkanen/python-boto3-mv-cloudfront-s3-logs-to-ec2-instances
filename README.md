@@ -103,7 +103,7 @@ $ cat logs/$(date +"%Y%m%d").log | grep -P '\t404\t' | cut -f 5 | sort | uniq -c
 Sort most hits.
 
 ```sh
-$ cat $(date +"%Y%m%d").log | cut -f4-5 -d$'\t' | sort | uniq -c | sort -nr | head -n10
+$ cat logs/$(date +"%Y%m%d").log | cut -f4-5 -d$'\t' | sort | uniq -c | sort -nr | head -n10
 ```
 
 ## Contributing
