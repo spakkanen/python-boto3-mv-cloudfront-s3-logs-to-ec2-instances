@@ -24,6 +24,7 @@ Server system on Unix platforms:
 ```
 $ sudo -i
 $ yum -y install python36
+$ pip install botocore
 $ pip install boto3
 ```
 
@@ -97,6 +98,12 @@ Find all 404 error links.
 
 ```sh
 $ cat logs/$(date +"%Y%m%d").log | grep -P '\t404\t' | cut -f 5 | sort | uniq -c | sort -nr | head -n10
+```
+
+Sort most hits.
+
+```sh
+$ cat $(date +"%Y%m%d").log | cut -f4-5 -d$'\t' | sort | uniq -c | sort -nr | head -n10
 ```
 
 ## Contributing
