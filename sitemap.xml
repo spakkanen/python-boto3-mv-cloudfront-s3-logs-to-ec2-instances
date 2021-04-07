@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+  <loc>https://spakkanen.github.io/python-boto3-mv-cloudfront-s3-logs-to-ec2-instances/</loc>
+  <lastmod>2021-04-07T20:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://spakkanen.github.io/python-boto3-mv-cloudfront-s3-logs-to-ec2-instances/README.md</loc>
+  <lastmod>2021-04-07T20:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://spakkanen.github.io/python-boto3-mv-cloudfront-s3-logs-to-ec2-instances/mv_s3_all_files.py</loc>
+  <lastmod>2021-04-07T20:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
+</url>
+</urlset>
